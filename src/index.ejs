@@ -38,6 +38,7 @@
       "imports": {
         "@example/header": "//localhost:8080/js/app.0.1.0.js",
         "@example/app1": "//localhost:8081/js/app.0.1.0.js",
+        "@example/app2": "//localhost:8082/js/app.0.1.0.js",
         "@example/root-config": "//localhost:9000/example-root-config.js",
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js",
         "vue": "https://cdn.jsdelivr.net/npm/vue@3.0.3/dist/vue.global.min.js",
@@ -58,6 +59,7 @@
       "imports": {
         "@example/header": "//localhost:8080/js/app.js",
         "@example/app1": "//localhost:8081/js/app.js",
+        "@example/app2": "//localhost:8082/js/app.js",
         "@example/root-config": "//localhost:9000/example-root-config.js"
       }
     }
@@ -78,6 +80,9 @@
         <application name="@example/header"></application>
       </nav>
       <main>
+        <route path="app2">
+          <application name="@example/app2"></application>
+        </route>
         <route default>
           <application name="@example/app1"></application>
         </route>
